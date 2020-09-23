@@ -104,6 +104,8 @@ For j=1 To worksheetCount
         if Cells(a,10).Value > greatestIncrease Then
             greatestIncrease = Cells(a,10).Value
             greatestIncreaseTicker = Cells(a,9).Value
+            Range("P2").Value = greatestIncreaseTicker
+            Range("Q2").Value = greatestIncrease
         End if
 
     Next a
@@ -119,7 +121,9 @@ For j=1 To worksheetCount
         
         if Cells(b,10).Value < greatestDecrease Then
             greatestDecrease = Cells(b,10).Value
-            greatestDecreaseTicker = Cells(a,9).Value
+            greatestDecreaseTicker = Cells(b,9).Value
+            Range("P3").Value = greatestDecreaseTicker
+            Range("Q3").Value = greatestDecrease
         End if
 
     Next b
@@ -134,27 +138,16 @@ For j=1 To worksheetCount
         
         if Cells(c,12).Value > greatestTotal Then
             greatestTotal = Cells(c,12).Value
-            greatestTotalTicker = Cells(a,9).Value
+            greatestTotalTicker = Cells(c,9).Value
+            Range("P4").Value = greatestTotalTicker
+            Range("Q4").Value = greatestTotal
         End if
         
     Next c
 
-
-    'Fill Ticker 
-    Range("P2").Value = greatestIncreaseTicker
-    Range("P3").Value = greatestDecreaseTicker
-    Range("P4").Value = greatestTotalTicker
-
-    'Fill Value
-    Range("Q2").Value = greatestIncrease
-    Range("Q3").Value = greatestDecrease
-    Range("Q4").Value = greatestTotal
-
-    'Autofit cells
     Worksheets(j).Columns("A:Z").AutoFit
 
 Next j
-
 
 
 End Sub
