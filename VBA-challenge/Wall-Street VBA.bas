@@ -15,6 +15,7 @@ worksheetCount = Worksheets.Count
 
 For j=1 To worksheetCount
 
+    Worksheets(j).Activate
 
     Cells(1, 9).Value = "Ticker"
     Cells(1, 10).Value = "Yearly Change"
@@ -67,8 +68,12 @@ For j=1 To worksheetCount
         
         yearChange = closingPrice - openPrice
         Cells(index, 10).Value = yearChange
-        percentChange = Round((closingPrice - openPrice) / openPrice * 100, 2)
-        Cells(index, 11).Value = percentChange
+
+        If openPrice > 0 Then
+            percentChange = Round((closingPrice - openPrice) / openPrice * 100, 2)
+            Cells(index, 11).Value = percentChange
+        End If
+
         If yearChange < 0 Then
             Cells(index, 10).Interior.ColorIndex = 3
         Else
