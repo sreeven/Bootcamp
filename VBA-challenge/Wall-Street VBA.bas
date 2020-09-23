@@ -110,7 +110,6 @@ For j=1 To worksheetCount
 
     Next a
 
-
     'Find Greatest % Decrease
 
     Dim greatestDecrease as Double
@@ -148,6 +147,5 @@ For j=1 To worksheetCount
     Worksheets(j).Columns("A:Z").AutoFit
 
 Next j
-
 
 End Sub
