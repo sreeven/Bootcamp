@@ -76,7 +76,7 @@ For j=1 To worksheetCount
 
         If yearChange < 0 Then
             Cells(index, 10).Interior.ColorIndex = 3
-        Else
+        ElseIf yearChange > 0 Then
             Cells(index, 10).Interior.ColorIndex = 4
         End If
         
