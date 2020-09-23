@@ -96,42 +96,62 @@ For j=1 To worksheetCount
     'Find Greatest % Increase
 
     Dim greatestIncrease as Double
+    Dim greatestIncreaseTicker as String
+    greatestIncrease = Cells(2,10).Value
 
     For a = 3 To numRows
-        greatestIncrease = Cells(2,9).Value
 
-        if Cells(a,9).Value > greatestIncrease Then
-            greatestIncrease = Cells(a,9).Value
+        if Cells(a,10).Value > greatestIncrease Then
+            greatestIncrease = Cells(a,10).Value
+            greatestIncreaseTicker = Cells(a,9).Value
         End if
+
+    Next a
 
 
     'Find Greatest % Decrease
 
     Dim greatestDecrease as Double
+    Dim greatestDecreaseTicker as String
+    greatestDecrease = Cells(2,10).Value
 
-    For a = 3 To numRows
-        greatestDecrease = Cells(2,9).Value
+    For b = 3 To numRows
         
-        if Cells(a,9).Value < greatestDecrease Then
-            greatestDecrease = Cells(a,9).Value
+        if Cells(b,10).Value < greatestDecrease Then
+            greatestDecrease = Cells(b,10).Value
+            greatestDecreaseTicker = Cells(a,9).Value
         End if
+
+    Next b
 
     'Find Greatest Total Volume
 
     Dim greatestTotal as Double
+    Dim greatestTotalTicker as String
+    greatestTotal = Cells(2,12).Value
 
-    For a = 3 To numRows
-        greatestTotal = Cells(2,11).Value
+    For c = 3 To numRows
         
-        if Cells(a,11).Value > greatestTotal Then
-            greatestTotal = Cells(a,11).Value
+        if Cells(c,12).Value > greatestTotal Then
+            greatestTotal = Cells(c,12).Value
+            greatestTotalTicker = Cells(a,9).Value
         End if
+        
+    Next c
 
 
-    'Fill Cells
+    'Fill Ticker 
+    Range("P2").Value = greatestIncreaseTicker
+    Range("P3").Value = greatestDecreaseTicker
+    Range("P4").Value = greatestTotalTicker
 
+    'Fill Value
+    Range("Q2").Value = greatestIncrease
+    Range("Q3").Value = greatestDecrease
+    Range("Q4").Value = greatestTotal
 
-
+    'Autofit cells
+    Worksheets(j).Columns("A:Z").AutoFit
 
 Next j
 
