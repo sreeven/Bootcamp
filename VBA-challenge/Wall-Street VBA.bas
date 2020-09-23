@@ -66,21 +66,21 @@ For j=1 To worksheetCount
         If Cells(i, 1).Value <> Cells(i + 1, 1).Value Then
             closingPrice = Cells(i, 6).Value
         
-        yearChange = closingPrice - openPrice
-        Cells(index, 10).Value = yearChange
+            yearChange = closingPrice - openPrice
+            Cells(index, 10).Value = yearChange
 
-        If openPrice > 0 Then
-            percentChange = Round((closingPrice - openPrice) / openPrice * 100, 2)
-            Cells(index, 11).Value = percentChange
-        End If
+            If openPrice > 0 Then
+                percentChange = Round((closingPrice - openPrice) / openPrice * 100, 2)
+                Cells(index, 11).Value = percentChange
+            End If
 
-        If yearChange < 0 Then
-            Cells(index, 10).Interior.ColorIndex = 3
-        ElseIf yearChange > 0 Then
-            Cells(index, 10).Interior.ColorIndex = 4
-        End If
-        
-        index = index + 1
+            If yearChange < 0 Then
+                Cells(index, 10).Interior.ColorIndex = 3
+            ElseIf yearChange > 0 Then
+                Cells(index, 10).Interior.ColorIndex = 4
+            End If
+            
+            index = index + 1
         End If
 
     Next i
@@ -95,11 +95,37 @@ For j=1 To worksheetCount
 
     'Find Greatest % Increase
 
+    Dim greatestIncrease as Double
+
+    For a = 3 To numRows
+        greatestIncrease = Cells(2,9).Value
+
+        if Cells(a,9).Value > greatestIncrease Then
+            greatestIncrease = Cells(a,9).Value
+        End if
+
 
     'Find Greatest % Decrease
 
+    Dim greatestDecrease as Double
+
+    For a = 3 To numRows
+        greatestDecrease = Cells(2,9).Value
+        
+        if Cells(a,9).Value < greatestDecrease Then
+            greatestDecrease = Cells(a,9).Value
+        End if
 
     'Find Greatest Total Volume
+
+    Dim greatestTotal as Double
+
+    For a = 3 To numRows
+        greatestTotal = Cells(2,11).Value
+        
+        if Cells(a,11).Value > greatestTotal Then
+            greatestTotal = Cells(a,11).Value
+        End if
 
 
     'Fill Cells
