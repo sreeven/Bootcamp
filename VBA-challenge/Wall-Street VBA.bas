@@ -85,6 +85,28 @@ For j=1 To worksheetCount
 
     Next i
 
+    'Greatest Increase labels
+
+    Range("P1").Value = "Ticker"
+    Range("Q1").Value = "Value"
+    Range("O2").Value = "Greatest % Increase"
+    Range("O3").Value = "Greatest % Decrease"
+    Range("O4").Value = "Greatest Total Volume"
+
+    'Find Greatest % Increase
+
+
+    'Find Greatest % Decrease
+
+
+    'Find Greatest Total Volume
+
+
+    'Fill Cells
+
+
+
+
 Next j
 
 
