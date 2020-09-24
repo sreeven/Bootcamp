@@ -97,12 +97,12 @@ For j=1 To worksheetCount
 
     Dim greatestIncrease as Double
     Dim greatestIncreaseTicker as String
-    greatestIncrease = Cells(2,10).Value
+    greatestIncrease = Cells(2,11).Value
 
     For a = 3 To numRows
 
-        if Cells(a,10).Value > greatestIncrease Then
-            greatestIncrease = Cells(a,10).Value
+        if Cells(a,11).Value > greatestIncrease Then
+            greatestIncrease = Cells(a,11).Value
             greatestIncreaseTicker = Cells(a,9).Value
             Range("P2").Value = greatestIncreaseTicker
             Range("Q2").Value = greatestIncrease
@@ -114,12 +114,12 @@ For j=1 To worksheetCount
 
     Dim greatestDecrease as Double
     Dim greatestDecreaseTicker as String
-    greatestDecrease = Cells(2,10).Value
+    greatestDecrease = Cells(2,11).Value
 
     For b = 3 To numRows
         
-        if Cells(b,10).Value < greatestDecrease Then
-            greatestDecrease = Cells(b,10).Value
+        if Cells(b,11).Value < greatestDecrease Then
+            greatestDecrease = Cells(b,11).Value
             greatestDecreaseTicker = Cells(b,9).Value
             Range("P3").Value = greatestDecreaseTicker
             Range("Q3").Value = greatestDecrease
