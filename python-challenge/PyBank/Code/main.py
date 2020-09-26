@@ -2,6 +2,7 @@ import os
 import csv
 
 
+
 def num_Months(file):
     count = 0
 
@@ -20,9 +21,6 @@ def profit_loss(file):
     return total
 
 
-
-
-
 # Open and read .csv files
 
 csvpath = os.path.join('..','Resources','budget_data.csv')
@@ -36,6 +34,7 @@ with open(csvpath) as csvfile:
     print("----------------------------")
 
     print(f"Total Months: {num_Months(budget_data)}")
+    csvfile.seek(0)
     print(f"Total: ${profit_loss(budget_data)}")
 
 
