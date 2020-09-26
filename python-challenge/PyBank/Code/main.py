@@ -23,10 +23,6 @@ def profit_loss(file):
 
 
 
-
-
-
-
 # Open and read .csv files
 
 csvpath = os.path.join('..','Resources','budget_data.csv')
@@ -42,12 +38,11 @@ with open(csvpath) as csvfile:
     print(f"Total Months: {num_Months(budget_data)}")
     print(f"Total: ${profit_loss(budget_data)}")
 
-    # print("........")
 
     # for row in budget_data:
     #     print(row)
 
-    # print("........")
+
     
 
 
