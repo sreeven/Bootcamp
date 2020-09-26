@@ -2,18 +2,22 @@ import os
 import csv
 
 
-def numMonths(file):
+def num_Months(file):
     count = 0
 
     for row in file:
-        count +=1
+        count += 1
     
     return count
 
+def profit_loss(file):
+    total = 0
 
+    for row in file:
+        amount = int(row[1])
+        total += amount
 
-
-
+    return total
 
 
 
@@ -35,6 +39,16 @@ with open(csvpath) as csvfile:
     print("Financial Analysis")
     print("----------------------------")
 
-    print(f"Total Months: {numMonths(budget_data)}")
+    print(f"Total Months: {num_Months(budget_data)}")
+    print(f"Total: ${profit_loss(budget_data)}")
+
+    # print("........")
+
+    # for row in budget_data:
+    #     print(row)
+
+    # print("........")
     
+
+
 
