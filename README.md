@@ -2,8 +2,8 @@
 
 # Projects:
 - Microsoft Excel Challenge
-   - Skills Showcased: [Excel Functions, Conditional Formatting, Pivot Tables, Pivot Charts, Data Filtering and Sorting]
+    - Skills Showcased: [Excel Functions, Conditional Formatting, Pivot Tables, Pivot Charts, Data Filtering and Sorting]
 - Excel VBA Challenge
-   - Skills Showcased: [VBA Scripting]
+    - Skills Showcased: [VBA Scripting]
 - Python Challenge
-   - Current
+    - Current
