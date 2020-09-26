@@ -9,4 +9,4 @@ With one command, the macro inserts the stocks' positive or negative yearly chan
 
 Due to the large file size, screenshots of the result can be found in the "Images" folder.
 
-Skills Showcased: VBA Scripting
+Skills Showcased: [VBA Scripting]
