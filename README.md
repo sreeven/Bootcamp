@@ -1,10 +1,7 @@
 # UC Irvine - Division of Continuing Education: Data Analytics Bootcamp
 
 # Projects:
-Markup : - Microsoft Excel Challenge
-    - Skills Showcased: [Excel Functions, Conditional Formatting, Pivot Tables, Pivot Charts, Data Filtering and Sorting]
-  - Excel VBA Challenge
-   - Skills Showcased: [VBA Scripting]
-  - Python Challenge
-   - Current
-  
+Markup: -hi
+    -k
+        -.
+   
