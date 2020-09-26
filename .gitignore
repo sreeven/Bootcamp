@@ -1,1 +1,8 @@
-*xlsx
+# ignore these files
+*.csv
+
+
+
+
+# except these
+!
