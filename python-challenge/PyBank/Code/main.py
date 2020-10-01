@@ -1,48 +1,62 @@
 import os
 import csv
 
-
-
-def num_Months(file):
-    count = 0
-
-    for row in file:
-        count += 1
-    
-    return count
-
-def profit_loss(file):
-    total = 0
-
-    for row in file:
-        amount = int(row[1])
-        total += amount
-
-    return total
-
-
-# Open and read .csv files
-
 csvpath = os.path.join('..','Resources','budget_data.csv')
 
 with open(csvpath) as csvfile:
-    budget_data = csv.reader(csvfile, delimiter = ',')
+    file = csv.reader(csvfile, delimiter = ',')
+    header = next(file)
+    sum = 0
+    profit_loss = []
+    change = []
+    total = 0
+    change_total = 0
+    max = 0
+    max_date = ""
+    min = 0
+    min_index = ""
 
-    header = next(budget_data)
+    for row in file:
+        amount = int(row[1])
+        profit_loss.append(int(amount))
+
+        if amount > max:
+            max = amount
+            max_date = row[0]
+        
+        if amount < min:
+            min = amount
+            min_date = row[0]
+
+
+    for value in profit_loss:
+        sum += value
+
+    for value in profit_loss:
+        total += value
+
+    months = len(profit_loss)
+
+    for index in range(1, len(profit_loss)):
+        change.append(profit_loss[index] - profit_loss[index-1])
+    
+    for value in change:
+        change_total += value
+
+    average_change = round(change_total / len(change),2)
+
 
     print("Financial Analysis")
     print("----------------------------")
+    print(f"Total Months: {months}")
+    print(f"Total: ${total}")
+    print(f"Average Change: {average_change}")
+    print(f"Greatest Increase in Profits: {max_date} ({max})")
+    print(f"Greatest Decrease in Profits: {min_date} ({min})")
 
-    print(f"Total Months: {num_Months(budget_data)}")
-    csvfile.seek(0)
-    print(f"Total: ${profit_loss(budget_data)}")
-
-
-    # for row in budget_data:
-    #     print(row)
- 
-
+    python "Desktop" > /path/to/output/myfile.txt
     
+
 
 
 
