@@ -6,4 +6,4 @@
 - Excel VBA Challenge
     - Skills Showcased: [VBA Scripting]
 - Python Challenge
-    - Current
+    - Skills Showcased: [Python]
