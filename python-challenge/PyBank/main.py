@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath = os.path.join('..','Resources','budget_data.csv')
+csvpath = os.path.join('Resources','budget_data.csv')
 
 with open(csvpath) as csvfile:
     file = csv.reader(csvfile, delimiter = ',')
@@ -54,7 +54,7 @@ with open(csvpath) as csvfile:
     print(f"Greatest Increase in Profits: {max_date} ({max})")
     print(f"Greatest Decrease in Profits: {min_date} ({min})")
 
-    python "Desktop" > /path/to/output/myfile.txt
+
     
 
 
