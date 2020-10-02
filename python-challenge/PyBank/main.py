@@ -55,6 +55,18 @@ with open(csvpath) as csvfile:
     print(f"Greatest Decrease in Profits: {min_date} ({min})")
 
 
+file = open("Analysis/analysis.txt", 'w')
+
+file.write("Financial Analysis" + "\n")
+file.write("----------------------------" + "\n")
+file.write(f"Total Months: {months}" + "\n")
+file.write(f"Total: ${total}" + "\n")
+file.write(f"Average Change: {average_change}" + "\n")
+file.write(f"Greatest Increase in Profits: {max_date} ({max})" + "\n")
+file.write(f"Greatest Decrease in Profits: {min_date} ({min})" + "\n")
+
+
+file.close()
     
 
 
