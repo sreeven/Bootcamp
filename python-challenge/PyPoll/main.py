@@ -42,6 +42,14 @@ with open(csvpath) as csvfile:
     file.write("-------------------------" + "\n")
     file.write(f"Total Votes: {total_votes}" + "\n")
     file.write("-------------------------" + "\n")
+
+    for candidate in results:
+        file.write(f"{candidate}: {round(results[candidate]/total_votes*100, 3)}% ({results[candidate]})")
+
+    file.write("-------------------------")
+
+    file.write(f"Winner: {max_votes}")
+
     file.close()
     
 
