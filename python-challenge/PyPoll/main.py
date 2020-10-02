@@ -37,12 +37,12 @@ with open(csvpath) as csvfile:
 
     print(f"Winner: {max_votes}")
 
-    # file = open("Analysis/analysis.txt", "w")
-    # file.write("Election Votes")
-    # file.write("-------------------------")
-    # file.write(f"Total Votes: {total_votes}")
-    # file.write("-------------------------")
-    # file.close()
+    file = open("Analysis/analysis.txt", "w")
+    file.write("Election Votes" + "\n")
+    file.write("-------------------------" + "\n")
+    file.write(f"Total Votes: {total_votes}" + "\n")
+    file.write("-------------------------" + "\n")
+    file.close()
     
 
 
