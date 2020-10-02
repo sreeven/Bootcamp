@@ -9,3 +9,5 @@ This task uses Python on a simplified set of mock data regarding a company's fin
 ## PyPoll
 
 This task uses Python on a set of mock election votes to show results. The data contains voter IDs, counties, and the candidate voted. The results show the total number of votes from the election, percent votes for each candidate, and the winner exported to a text file. 
+
+Skills Showcased: [Python]
