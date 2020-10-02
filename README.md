@@ -7,3 +7,5 @@
     - Skills Showcased: [VBA Scripting]
 - Python Challenge
     - Skills Showcased: [Python]
+- Pandas Challenge
+    - Current
