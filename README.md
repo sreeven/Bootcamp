@@ -8,4 +8,4 @@
 - Python Challenge
     - Skills Showcased: [Python]
 - Pandas Challenge
-    - Current
+    - Skills Showcased: [Python, Data Cleaning]
