@@ -9,3 +9,5 @@
     - Skills Showcased: [Python]
 - Pandas Challenge
     - Skills Showcased: [Python, Pandas, Data Cleaning]
+- Matplotlib Challenge
+    - Current
