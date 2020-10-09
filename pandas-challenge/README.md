@@ -4,4 +4,4 @@ Heroes of Pymoli is treated as a free game that, like many others, encourages pl
 
 Knowing these factors can help the company market those items better to certain audiences and increase the game's revenue.
 
-Skills Showcased: [Python, Data Cleaning]
+Skills Showcased: [Python, Pandas, Data Cleaning]
