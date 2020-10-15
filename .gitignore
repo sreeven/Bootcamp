@@ -4,6 +4,8 @@
 
 *.csv
 
+## APY Keys
+config.py
 
 
 
