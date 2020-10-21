@@ -11,6 +11,6 @@
     - Skills Showcased: [Python, Pandas, Data Cleaning]
 - Matplotlib Challenge
     - Skills Showcased: [Python, Pandas, Matplotlib, Data Visualization, Data Cleaning]
--Python API Challenge:
+- Python API Challenge:
     - Skills Showcased: [Python, Pandas, NumPy, JSON,  Matplotlib, Data Visualization, Data Cleaning]
     - APIs Used: [Open Weather, Google Maps]
