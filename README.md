@@ -14,3 +14,6 @@
 - Python API Challenge:
     - Skills Showcased: [Python, Pandas, NumPy, JSON,  Matplotlib, Data Visualization, Data Cleaning]
     - APIs Used: [Open Weather, Google Maps]
+- SQL Challenge
+    - [Current]
+    
