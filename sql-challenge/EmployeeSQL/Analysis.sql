@@ -17,14 +17,21 @@ WHERE hire_date LIKE '%1986';
 SELECT dept_manager.dept_no, departments.dept_name, emp.emp_no, emp.last_name, emp.first_name
 FROM dept_manager
 LEFT JOIN departments ON dept_manager.dept_no = departments.dept_no
-LEFT JOIN employees emp ON dept_manager.emp_no = emp.emp_no
+LEFT JOIN employees emp ON dept_manager.emp_no = emp.emp_no;
 
--- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
+-- 4. List the department of each employee with the following information: 
+-- employee number, last name, first name, and department name.
+
+SELECT emp.emp_no, emp.last_name, emp.first_name, departments.dept_name
+FROM employees emp
+LEFT JOIN dept_emp ON dept_emp.emp_no = emp.emp_no
+LEFT JOIN departments ON dept_emp.dept_no = departments.dept_no;
 
 -- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
 -- 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
--- 7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+-- 7. List all employees in the Sales and Development departments, 
+-- including their employee number, last name, first name, and department name.
 
 -- 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
