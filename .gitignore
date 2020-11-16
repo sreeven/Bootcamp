@@ -1,5 +1,8 @@
 # ignore these files
 
+## icloud files
+*.icloud
+
 ## csv files
 
 *.csv
