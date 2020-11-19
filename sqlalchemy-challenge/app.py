@@ -35,7 +35,8 @@ def home():
         f"Precipitation: /api/v1.0/precipitation<br/>"
         f"Stations: /api/v1.0/stations<br/>"
         f"Temperature for last year: /api/v1.0/tobs<br/>"
-        f"Temperature stats for start-end dates: /api/v1.0/<start> and /api/v1.0/<start>/<end><br/>"
+        f"Temperature stats from start date: /api/v1.0/yyyy-mm-dd<br/>"
+        f"Temperature stats from start to end dates: /api/v1.0/yyyy-mm-dd/yyyy-mm-dd<end><br/>"
 
     )
 
@@ -81,14 +82,14 @@ def stations():
 def tobs():
     session = Session(engine)
     last_date = session.query(MA.date).order_by(MA.date.desc()).first()[0]
-    last_date = dt.datetime.strptime(lateststr, '%Y-%m-%d')
-    result = dt.date(last_date.year -1, last_date.month, last_date.day)
+    last_date = dt.datetime.strptime(last_date, '%Y-%m-%d')
+    query_date = dt.date(last_date.year -1, last_date.month, last_date.day)
     sel = [MA.date,MA.tobs]
-    result = session.query(*sel).filter(Measurement.date >= querydate).all()
+    result = session.query(*sel).filter(MA.date >= query_date).all()
     session.close()
 
     all_tobs = []
-    for date, tobs in queryresult:
+    for date, tobs in result:
         tobs_dict = {}
         tobs_dict["Date"] = date
         tobs_dict["Tobs"] = tobs
@@ -97,7 +98,40 @@ def tobs():
     return jsonify(all_tobs)
 
 
-# @app.route("/api/v1.0/<start> and /api/v1.0/<start>/<end>")
+@app.route("/api/v1.0/<start>")
+def start(start):
+    session = Session(engine)
+    result = session.query(func.min(MA.tobs), func.avg(MA.tobs), func.max(MA.tobs)).\
+        filter(MA.date >= start).all()
+    session.close()
+
+    all_tobs = []
+    for min,avg,max in result:
+        tobs_dict = {}
+        tobs_dict["Min"] = min
+        tobs_dict["Average"] = avg
+        tobs_dict["Max"] = max
+        all_tobs.append(tobs_dict)
+
+    return jsonify(all_tobs)
+
+
+@app.route("/api/v1.0/<start>/<stop>")
+def start_stop(start,stop):
+    session = Session(engine)
+    result = session.query(func.min(MA.tobs), func.avg(MA.tobs), func.max(MA.tobs)).\
+        filter(MA.date >= start).filter(MA.date <= stop).all()
+    session.close()
+
+    all_tobs = []
+    for min,avg,max in result:
+        tobs_dict = {}
+        tobs_dict["Min"] = min
+        tobs_dict["Average"] = avg
+        tobs_dict["Max"] = max
+        all_tobs.append(tobs_dict)
+
+    return jsonify(all_tobs)
 
 
 if __name__ == "__main__":
