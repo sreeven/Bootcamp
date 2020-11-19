@@ -23,7 +23,15 @@ app = Flask(__name__)
 # Routes
 
 @app.route("/")
+def home():
+    return (
+        f"Available Routes:<br/>"
+        f"Precipitation: /api/v1.0/precipitation<br/>"
+        f"Stations: /api/v1.0/stations<br/>"
+        f"Temperature for last year: /api/v1.0/tobs<br/>"
+        f"Temperature stats for start-end dates: /api/v1.0/<start> and /api/v1.0/<start>/<end><br/>"
 
+    )
 
 
 @app.route("/api/v1.0/precipitation")
