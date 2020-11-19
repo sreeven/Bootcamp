@@ -20,3 +20,23 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+# Routes
+
+@app.route("/")
+
+
+
+@app.route("/api/v1.0/precipitation")
+
+
+
+@app.route("/api/v1.0/stations")
+
+
+
+
+@app.route("/api/v1.0/tobs")
+
+
+
+@app.route("/api/v1.0/<start> and /api/v1.0/<start>/<end>")
