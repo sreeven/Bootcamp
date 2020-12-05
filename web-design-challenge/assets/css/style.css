@@ -1,0 +1,11 @@
+.nav-background {
+    background-color: whitesmoke;
+}
+
+.nav-home {
+    background-color: lightseagreen;
+    padding: 10px;
+    font-size: 20pt;
+    margin-left: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
