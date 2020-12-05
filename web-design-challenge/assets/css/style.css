@@ -1,3 +1,4 @@
+
 .nav-background {
     background-color: whitesmoke;
 }
@@ -9,3 +10,12 @@
     margin-left: 10%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.white {
+    color: whitesmoke;
+}
+
+.nav-right {
+    float: right;
+}
+
