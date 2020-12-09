@@ -17,4 +17,8 @@
 - SQL Challenge
     - Skills Showcased: [SQL, PostgreSQL]
 - SQL Alchemy Challenge
+    - Skills Showcased: [Python, SQL, SQLAlchemy, JSON]
+- Web-Design Challenge
+    - [Current]
+- Web Scraping Challenge
     - [Current]
