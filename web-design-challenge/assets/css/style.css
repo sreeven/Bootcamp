@@ -36,6 +36,16 @@
     background-color: teal;
 }
 
-.box-top-magin {
-    margin-top: 20px;
+.box-top {
+    margin: 20px 0px 0px 0px;
+}
+
+.left-box {
+    margin: 0px 0px 0px 0px;
+    padding: 20px;
+}
+
+.right-box {
+    margin: 0px 0px 0px 20px;
+    padding: 20px;
 }
