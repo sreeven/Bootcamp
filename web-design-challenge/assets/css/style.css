@@ -32,8 +32,8 @@
     margin: 0px 300px 0px 0px;
 }
 
-.nav-teal {
-    background-color: teal;
+.nav-color {
+    background-color: lightseagreen;
 }
 
 .box-top {
@@ -42,10 +42,20 @@
 
 .left-box {
     margin: 0px 0px 0px 0px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .right-box {
     margin: 0px 0px 0px 20px;
-    padding: 20px;
+    padding: 40px;
+}
+
+.heading {
+    color: lightseagreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.hr-style {;
+    width: 500px;
 }
