@@ -56,7 +56,10 @@
     font-weight: bold;
 }
 
-.hr-style {;
+.hr-left-home {;
     width: 500px;
     margin: 20px 0px 20px 0px;
 }
+
+.home-right-box {
+    margin: 0px 40px 0px 0px;}
