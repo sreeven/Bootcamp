@@ -14,7 +14,7 @@
 
     <body style="background-color: rgb(228, 227, 227);">
         
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white; padding: -10px;">
         <div class="container-fluid">
           <a class="navbar-brand nav-color" id="home-button" href="#">Latitude</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +47,9 @@
 
       <div class ="container">
         <div class="row box-top">
+
+          <!-- LEFT BOX -->
+
             <div class="col-7 box-color left-box">
               <h1 class="heading">Summary: Latitude vs. X</h1>
               <hr class="hr-left-home">
@@ -55,14 +58,22 @@
                   <img src="assets/images/temp.png" alt="temp" width="200" height="200">
                 </div>
                 <div class="col-8">
-                  <p><b>How does latitude affect weather?</b></p>
+                  <p></p><b>How does latitude affect weather?</b></p>
                   <p>This website displays the correlation between weather and latitude. The analysis utilizes the OpenWeather API
                     to compare data between 500 cities.
                   </p>
-                  <p></p>
+                  <p>
+                    After extracing the data, we used Matplotlib to create visualizations for the 4 weather factors of weather
+                    in correlation with latitude.
+                  </p>
                 </div>
               </div>
             </div>
+
+          <!-- END LEFT BOX -->
+
+          <!-- RIGHT BOX -->
+            
             <div class="col-4 box-color right-box">
               <h1 class="heading">Visualizations</h1>
               <hr class="hr-style">
@@ -85,6 +96,9 @@
                   </div>
                 </div>
             </div>
+
+          <!-- END RIGHT BOX -->
+
           </div>
       </div>
 

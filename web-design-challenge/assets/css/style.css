@@ -5,9 +5,9 @@
 
 .nav-home {
     background-color: lightseagreen;
-    padding: 10px;
+    /* padding: 0px; */
     font-size: 20pt;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -62,4 +62,10 @@
 }
 
 .home-right-box {
-    margin: 0px 40px 0px 0px;}
+    margin: 0px 40px 0px 0px;
+}
+
+img {
+    float: none;
+}
+
