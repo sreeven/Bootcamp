@@ -16,7 +16,7 @@
 }
 
 .nav-right {
-    margin: 0px 0px 0px 500px;
+    margin: 0px 0px 0px 750px;
 }
 
 .box-color {
@@ -86,4 +86,13 @@ img {
 
 .plot-heading {
     font-size: 35px;
+}
+
+#data-box {
+    margin: 20px 10px 0px 0px;
+    font-size: 15px;
+    /* padding: 200px; */}
+
+#data-heading {
+    /* padding: 30px; */
 }
