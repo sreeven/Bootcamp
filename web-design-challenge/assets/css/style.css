@@ -3,13 +3,13 @@
     background-color: whitesmoke;
 }
 
-.nav-home {
-    background-color: lightseagreen;
-    /* padding: 0px; */
-    font-size: 20pt;
-    /* margin-left: 10%; */
+/* #nav-home {
+    background-color: lightseagreen; */
+    padding: 0px;
+    font-size: 10pt;
+    margin-left: 10%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+} */
 
 .white {
     color: whitesmoke;
