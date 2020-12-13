@@ -69,3 +69,17 @@ img {
     float: none;
 }
 
+#plot-heading {
+    color: lightseagreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#img-quick {
+    width: 500px;
+    height: 400px;
+    margin-left: 0px;
+}
