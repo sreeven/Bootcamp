@@ -57,7 +57,7 @@
 }
 
 .hr-left-home {;
-    width: 500px;
+    width: 550px;
     margin: 20px 0px 20px 0px;
 }
 
@@ -82,4 +82,8 @@ img {
     width: 500px;
     height: 400px;
     margin-left: 0px;
+}
+
+.plot-heading {
+    font-size: 35px;
 }
