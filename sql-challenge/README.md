@@ -5,3 +5,5 @@ This task used PostgreSQL to create several tables utilizing several keys to sto
 <img src="erd.png" alt="erd" width="600px" height="300px">
 
 Utilizing this structure can efficiently store information and run queries to analyze various information. Examples of this analysis can be found <a href="EmployeeSQL/analysis.sql">here</a>.
+
+Skills Showcased: [PostgreSQL]

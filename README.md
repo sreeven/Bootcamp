@@ -15,7 +15,7 @@
     - Skills Showcased: [Python, Pandas, NumPy, JSON,  Matplotlib, Data Visualization, Data Cleaning]
     - APIs Used: [Open Weather, Google Maps]
 - SQL Challenge
-    - Skills Showcased: [SQL, PostgreSQL]
+    - Skills Showcased: [PostgreSQL]
 - SQL Alchemy Challenge
     - Skills Showcased: [Python, SQL, SQLAlchemy, JSON]
 - Web-Design Challenge
