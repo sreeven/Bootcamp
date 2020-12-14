@@ -96,3 +96,8 @@ img {
 #right-box-height {
     height: 470px;
 }
+
+#analysis {
+    color: slategray;
+    text-align: justify;
+}
