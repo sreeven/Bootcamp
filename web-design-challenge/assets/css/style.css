@@ -42,7 +42,7 @@
 
 .left-box {
     margin: 0px 0px 0px 0px;
-    padding: 40px;
+    padding: 40px 60px 60px 40px;
 }
 
 .right-box {
@@ -101,3 +101,15 @@ img {
     color: slategray;
     text-align: justify;
 }
+
+
+@media (max-width: 1000px) {
+    body {
+      background-color: lightblue;
+      
+    }
+    .left-box {
+        background-color: blue;
+
+    }
+  }
