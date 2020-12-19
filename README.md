@@ -19,6 +19,6 @@
 - SQL Alchemy Challenge
     - Skills Showcased: [Python, SQL, SQLAlchemy, JSON]
 - Web-Design Challenge
-    - [Current]
+    - Skills Showcased: [HTML, CSS, Python, Matplotlib]
 - Web Scraping Challenge
     - [Current]
