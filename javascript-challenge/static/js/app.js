@@ -2,10 +2,13 @@
 var tableData = data;
 
 
+// table
+var body = d3.select("tbody");
+
+
 // build the table
 
 function buildTable(data) {
-    var body = d3.select("tbody");
 
     // add row
 
@@ -18,15 +21,13 @@ function buildTable(data) {
         Object.values(row).forEach((value) => {
             cell = tRow.append("td");
             cell.text(value);
-        })
-
-
-
+        }
+        );
     }
     );
 
-
 }
+
 buildTable(data);
 
 
