@@ -1,5 +1,5 @@
 // from data.js
-var tableData = data;
+// var tableData = data;
 
 // table
 var body = d3.select("tbody");
@@ -29,13 +29,14 @@ buildTable(data);
 function handleClick {
 
     // get input
-    input = d3.select(".form-control").property("value")
+    input = d3.select(".form-control").property("value");
 
+    if (input){
 
-    // filter data
+        // filter data
+        filteredData = data.filter((row) => row.datetime === input);
+    }
 
-    // function filterData(data) {
-
-    // }
+    buildTable(filteredData);
 
 }
