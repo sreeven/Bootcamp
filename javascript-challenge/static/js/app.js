@@ -7,6 +7,8 @@ var body = d3.select("tbody");
 // build the table
 
 function buildTable(data) {
+    // clear existing table
+    body.html("")
 
     // add row
     data.forEach((row) => {
@@ -34,10 +36,12 @@ function handleClick() {
     if (input){
 
         // filter data
-        filteredData = data.filter((row) => row.datetime === input);
+        filteredData = data.filter(row => row.datetime === input);
     }
 
     buildTable(filteredData);
 }
 
 
+// event listener
+d3.selectAll("#filter-btn").on("click", handleClick);
