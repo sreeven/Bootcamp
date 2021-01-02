@@ -29,6 +29,8 @@ function buildTable(data) {
 buildTable(data);
 
 function handleClick() {
+    d3.event.preventDefault();
+    console.log("new entry");
 
     // get input
     input = d3.select(".form-control").property("value");
