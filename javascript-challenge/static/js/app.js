@@ -26,4 +26,16 @@ function buildTable(data) {
 
 buildTable(data);
 
+function handleClick {
 
+    // get input
+    input = d3.select(".form-control").property("value")
+
+
+    // filter data
+
+    // function filterData(data) {
+
+    // }
+
+}
