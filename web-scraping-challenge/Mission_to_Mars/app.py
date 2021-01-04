@@ -23,3 +23,80 @@ def scrape_news():
 
     return title, body
 
+# FEATURED IMAGE -----------
+def featured_image():
+    url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
+    browser.visit(url)
+
+    button = browser.find_by_id('full_image')
+    button.click()
+
+    button = browser.links.find_by_partial_text('more info')
+    button.click()
+
+    html = browser.html
+    soup = bs(html, 'html.parser')
+
+    img = soup.find('img', class_ = 'main_image').get('src')
+    img_url = f'https://www.jpl.nasa.gov{img}'
+
+    return img_url
+
+# FACT TABLE
+def fact_table():
+    url = "https://space-facts.com/mars/"
+    browser.visit(url)
+
+    table = pd.read_html(url)[0]
+    table.columns = {
+        "Description",
+        "Mars"
+    }
+
+    table.set_index("Description", inplace=True)
+
+    return table
+
+    # table.to_html('mars_table.html')
+
+def scrape_hemispheres():
+
+    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    browser.visit(url)
+
+    html = browser.html
+    soup = bs(html)
+
+    blocks = soup.find_all("div",class_= "description")
+
+
+    base_url = "https://astrogeology.usgs.gov"
+
+    hemispheres = []
+    h_urls = []
+
+    for block in blocks:
+        title = (block.find("h3")).text
+        title = title.replace(" Enhanced","")
+        hemispheres.append(title)
+        
+        link = block.find('a', class_='itemLink')['href']
+        h_urls.append(f"{base_url}{link}")
+
+    h_img_urls = []
+    for link in h_urls:
+        browser.visit(link)
+        html = browser.html
+        soup = bs(html)
+        
+        blocks = soup.find_all('div', class_='downloads')
+        url = blocks[0].find_all('a')[0]['href']
+        h_img_urls.append(url)
+
+    mars_hemispheres = []
+    for x in range(4):
+        item = {
+            "title": hemispheres[x],
+            "img_url": h_img_urls[x]
+        }
+        mars_hemispheres.append(item)
