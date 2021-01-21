@@ -4,10 +4,24 @@ from bs4 import BeautifulSoup as bs
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
-# path
-def init_browser():
+# scrape all
+def scrape_all():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
+
+    title, paragraph = mars_news(browser)
+
+    data = {
+        "title": title,
+        "paragraph": paragraph,
+        "image": featured_image(browser),
+        "facts": fact_table(),
+        "hemispheres":scrape_hemispheres(browser)
+    }
+
+    browser.quit()
+    return data
+
 
 # NEWS -----------
 def scrape_news():
@@ -100,3 +114,7 @@ def scrape_hemispheres():
             "img_url": h_img_urls[x]
         }
         mars_hemispheres.append(item)
+    return mars_hemispheres
+
+if __name__ == "__main__":
+    print(scrape_all)
