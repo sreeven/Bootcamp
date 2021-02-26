@@ -1,0 +1,1334 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0114.0916                               -->
+<workbook source-build='2020.4.1 (20204.21.0114.0916)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='feb_2020_data' inline='true' name='federated.05urv8100ezs5w1cfygk21bc0o45' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='feb_2020_data' name='textscan.0r06a3j1ykqgu31772zmh1wv48dj'>
+            <connection class='textscan' directory='/Users/sreeven/Desktop/GitHub/Bootcamp/tableau-challenge' filename='feb_2020_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0r06a3j1ykqgu31772zmh1wv48dj' name='feb_2020_data.csv' table='[feb_2020_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='tripduration' ordinal='0' />
+            <column datatype='datetime' name='starttime' ordinal='1' />
+            <column datatype='datetime' name='stoptime' ordinal='2' />
+            <column datatype='integer' name='start station id' ordinal='3' />
+            <column datatype='string' name='start station name' ordinal='4' />
+            <column datatype='real' name='start station latitude' ordinal='5' />
+            <column datatype='real' name='start station longitude' ordinal='6' />
+            <column datatype='integer' name='end station id' ordinal='7' />
+            <column datatype='string' name='end station name' ordinal='8' />
+            <column datatype='real' name='end station latitude' ordinal='9' />
+            <column datatype='real' name='end station longitude' ordinal='10' />
+            <column datatype='integer' name='bikeid' ordinal='11' />
+            <column datatype='string' name='usertype' ordinal='12' />
+            <column datatype='integer' name='birth year' ordinal='13' />
+            <column datatype='integer' name='gender' ordinal='14' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0r06a3j1ykqgu31772zmh1wv48dj' name='feb_2020_data.csv' table='[feb_2020_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='tripduration' ordinal='0' />
+              <column datatype='datetime' name='starttime' ordinal='1' />
+              <column datatype='datetime' name='stoptime' ordinal='2' />
+              <column datatype='integer' name='start station id' ordinal='3' />
+              <column datatype='string' name='start station name' ordinal='4' />
+              <column datatype='real' name='start station latitude' ordinal='5' />
+              <column datatype='real' name='start station longitude' ordinal='6' />
+              <column datatype='integer' name='end station id' ordinal='7' />
+              <column datatype='string' name='end station name' ordinal='8' />
+              <column datatype='real' name='end station latitude' ordinal='9' />
+              <column datatype='real' name='end station longitude' ordinal='10' />
+              <column datatype='integer' name='bikeid' ordinal='11' />
+              <column datatype='string' name='usertype' ordinal='12' />
+              <column datatype='integer' name='birth year' ordinal='13' />
+              <column datatype='integer' name='gender' ordinal='14' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0r06a3j1ykqgu31772zmh1wv48dj' name='feb_2021_data.csv' table='[feb_2021_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='tripduration' ordinal='0' />
+              <column datatype='datetime' name='starttime' ordinal='1' />
+              <column datatype='datetime' name='stoptime' ordinal='2' />
+              <column datatype='integer' name='start station id' ordinal='3' />
+              <column datatype='string' name='start station name' ordinal='4' />
+              <column datatype='real' name='start station latitude' ordinal='5' />
+              <column datatype='real' name='start station longitude' ordinal='6' />
+              <column datatype='integer' name='end station id' ordinal='7' />
+              <column datatype='string' name='end station name' ordinal='8' />
+              <column datatype='real' name='end station latitude' ordinal='9' />
+              <column datatype='real' name='end station longitude' ordinal='10' />
+              <column datatype='integer' name='bikeid' ordinal='11' />
+              <column datatype='string' name='usertype' ordinal='12' />
+              <column datatype='integer' name='birth year' ordinal='13' />
+              <column datatype='integer' name='gender' ordinal='14' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[bikeid (feb_2021_data.csv)]' value='[feb_2021_data.csv].[bikeid]' />
+          <map key='[bikeid]' value='[feb_2020_data.csv].[bikeid]' />
+          <map key='[birth year (feb_2021_data.csv)]' value='[feb_2021_data.csv].[birth year]' />
+          <map key='[birth year]' value='[feb_2020_data.csv].[birth year]' />
+          <map key='[end station id (feb_2021_data.csv)]' value='[feb_2021_data.csv].[end station id]' />
+          <map key='[end station id]' value='[feb_2020_data.csv].[end station id]' />
+          <map key='[end station latitude (feb_2021_data.csv)]' value='[feb_2021_data.csv].[end station latitude]' />
+          <map key='[end station latitude]' value='[feb_2020_data.csv].[end station latitude]' />
+          <map key='[end station longitude (feb_2021_data.csv)]' value='[feb_2021_data.csv].[end station longitude]' />
+          <map key='[end station longitude]' value='[feb_2020_data.csv].[end station longitude]' />
+          <map key='[end station name (feb_2021_data.csv)]' value='[feb_2021_data.csv].[end station name]' />
+          <map key='[end station name]' value='[feb_2020_data.csv].[end station name]' />
+          <map key='[gender (feb_2021_data.csv)]' value='[feb_2021_data.csv].[gender]' />
+          <map key='[gender]' value='[feb_2020_data.csv].[gender]' />
+          <map key='[start station id (feb_2021_data.csv)]' value='[feb_2021_data.csv].[start station id]' />
+          <map key='[start station id]' value='[feb_2020_data.csv].[start station id]' />
+          <map key='[start station latitude (feb_2021_data.csv)]' value='[feb_2021_data.csv].[start station latitude]' />
+          <map key='[start station latitude]' value='[feb_2020_data.csv].[start station latitude]' />
+          <map key='[start station longitude (feb_2021_data.csv)]' value='[feb_2021_data.csv].[start station longitude]' />
+          <map key='[start station longitude]' value='[feb_2020_data.csv].[start station longitude]' />
+          <map key='[start station name (feb_2021_data.csv)]' value='[feb_2021_data.csv].[start station name]' />
+          <map key='[start station name]' value='[feb_2020_data.csv].[start station name]' />
+          <map key='[starttime (feb_2021_data.csv)]' value='[feb_2021_data.csv].[starttime]' />
+          <map key='[starttime]' value='[feb_2020_data.csv].[starttime]' />
+          <map key='[stoptime (feb_2021_data.csv)]' value='[feb_2021_data.csv].[stoptime]' />
+          <map key='[stoptime]' value='[feb_2020_data.csv].[stoptime]' />
+          <map key='[tripduration (feb_2021_data.csv)]' value='[feb_2021_data.csv].[tripduration]' />
+          <map key='[tripduration]' value='[feb_2020_data.csv].[tripduration]' />
+          <map key='[usertype (feb_2021_data.csv)]' value='[feb_2021_data.csv].[usertype]' />
+          <map key='[usertype]' value='[feb_2020_data.csv].[usertype]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[feb_2020_data.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[starttime (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[stoptime (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender (feb_2021_data.csv)]</local-name>
+            <parent-name>[feb_2021_data.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='feb_2020_data.csv' datatype='table' name='[__tableau_internal_object_id__].[feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='feb_2021_data.csv' datatype='table' name='[__tableau_internal_object_id__].[feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0]' role='measure' type='quantitative' />
+      <column caption='Bikeid (Feb 2021 Data.Csv)' datatype='integer' name='[bikeid (feb_2021_data.csv)]' role='measure' type='quantitative' />
+      <column caption='Bikeid' datatype='integer' name='[bikeid]' role='measure' type='quantitative' />
+      <column caption='Birth Year (Feb 2021 Data.Csv)' datatype='integer' name='[birth year (feb_2021_data.csv)]' role='dimension' type='quantitative' />
+      <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+      <column caption='End Station Id (Feb 2021 Data.Csv)' datatype='integer' name='[end station id (feb_2021_data.csv)]' role='measure' type='quantitative' />
+      <column caption='End Station Id' datatype='integer' name='[end station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude (Feb 2021 Data.Csv)' datatype='real' name='[end station latitude (feb_2021_data.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude (Feb 2021 Data.Csv)' datatype='real' name='[end station longitude (feb_2021_data.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name (Feb 2021 Data.Csv)' datatype='string' name='[end station name (feb_2021_data.csv)]' role='dimension' type='nominal' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column caption='Gender (Feb 2021 Data.Csv)' datatype='integer' name='[gender (feb_2021_data.csv)]' role='measure' type='quantitative' />
+      <column caption='Start Station Id (Feb 2021 Data.Csv)' datatype='integer' name='[start station id (feb_2021_data.csv)]' role='measure' type='quantitative' />
+      <column caption='Start Station Id' datatype='integer' name='[start station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude (Feb 2021 Data.Csv)' datatype='real' name='[start station latitude (feb_2021_data.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude (Feb 2021 Data.Csv)' datatype='real' name='[start station longitude (feb_2021_data.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name (Feb 2021 Data.Csv)' datatype='string' name='[start station name (feb_2021_data.csv)]' role='dimension' type='nominal' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column aggregation='Hour' caption='Starttime (Feb 2021 Data.Csv)' datatype='datetime' name='[starttime (feb_2021_data.csv)]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Stoptime (Feb 2021 Data.Csv)' datatype='datetime' name='[stoptime (feb_2021_data.csv)]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Tripduration (Feb 2021 Data.Csv)' datatype='integer' name='[tripduration (feb_2021_data.csv)]' role='measure' type='quantitative' />
+      <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Usertype (Feb 2021 Data.Csv)' datatype='string' name='[usertype (feb_2021_data.csv)]' role='dimension' type='nominal' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='feb_2020_data.csv' id='feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969'>
+            <properties context=''>
+              <relation connection='textscan.0r06a3j1ykqgu31772zmh1wv48dj' name='feb_2020_data.csv' table='[feb_2020_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='tripduration' ordinal='0' />
+                  <column datatype='datetime' name='starttime' ordinal='1' />
+                  <column datatype='datetime' name='stoptime' ordinal='2' />
+                  <column datatype='integer' name='start station id' ordinal='3' />
+                  <column datatype='string' name='start station name' ordinal='4' />
+                  <column datatype='real' name='start station latitude' ordinal='5' />
+                  <column datatype='real' name='start station longitude' ordinal='6' />
+                  <column datatype='integer' name='end station id' ordinal='7' />
+                  <column datatype='string' name='end station name' ordinal='8' />
+                  <column datatype='real' name='end station latitude' ordinal='9' />
+                  <column datatype='real' name='end station longitude' ordinal='10' />
+                  <column datatype='integer' name='bikeid' ordinal='11' />
+                  <column datatype='string' name='usertype' ordinal='12' />
+                  <column datatype='integer' name='birth year' ordinal='13' />
+                  <column datatype='integer' name='gender' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='feb_2021_data.csv' id='feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0'>
+            <properties context=''>
+              <relation connection='textscan.0r06a3j1ykqgu31772zmh1wv48dj' name='feb_2021_data.csv' table='[feb_2021_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='tripduration' ordinal='0' />
+                  <column datatype='datetime' name='starttime' ordinal='1' />
+                  <column datatype='datetime' name='stoptime' ordinal='2' />
+                  <column datatype='integer' name='start station id' ordinal='3' />
+                  <column datatype='string' name='start station name' ordinal='4' />
+                  <column datatype='real' name='start station latitude' ordinal='5' />
+                  <column datatype='real' name='start station longitude' ordinal='6' />
+                  <column datatype='integer' name='end station id' ordinal='7' />
+                  <column datatype='string' name='end station name' ordinal='8' />
+                  <column datatype='real' name='end station latitude' ordinal='9' />
+                  <column datatype='real' name='end station longitude' ordinal='10' />
+                  <column datatype='integer' name='bikeid' ordinal='11' />
+                  <column datatype='string' name='usertype' ordinal='12' />
+                  <column datatype='integer' name='birth year' ordinal='13' />
+                  <column datatype='integer' name='gender' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[bikeid]' />
+              <expression op='[bikeid (feb_2021_data.csv)]' />
+            </expression>
+            <first-end-point object-id='feb_2020_data.csv_57EF389E345B4CB5A709098C4084D969' />
+            <second-end-point object-id='feb_2021_data.csv_F35C31958F0141BDBC71138CF89606F0' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Trip Duration and User Type 2020'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='feb_2020_data' name='federated.05urv8100ezs5w1cfygk21bc0o45' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.05urv8100ezs5w1cfygk21bc0o45'>
+            <column-instance column='[end station latitude]' derivation='Avg' name='[avg:end station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station longitude]' derivation='Avg' name='[avg:end station longitude:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[tripduration]' derivation='None' name='[none:tripduration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station longitude:qk]' field-type='quantitative' max='-8239223.0344952019' min='-8247277.9331427161' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station latitude:qk]' field-type='quantitative' max='4979795.6000652891' min='4965164.8661122015' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='place-village' value='true' />
+            <format attr='enabled' id='place-town' value='true' />
+            <format attr='enabled' id='place-islands' value='true' />
+            <format attr='enabled' id='place-islands-2' value='true' />
+            <format attr='enabled' id='place-city-sm' value='true' />
+            <format attr='enabled' id='place-city-md-s' value='true' />
+            <format attr='enabled' id='place-city-md-n' value='true' />
+            <format attr='enabled' id='place-city-lg-s' value='true' />
+            <format attr='enabled' id='place-city-lg-n' value='true' />
+            <format attr='enabled' id='place-capital-s' value='true' />
+            <format attr='enabled' id='place-capital-n' value='true' />
+            <format attr='enabled' id='US Metro Labels CBSA' value='true' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='poi-minor-secondary' value='true' />
+            <format attr='enabled' id='poi-minor-primary' value='true' />
+            <format attr='enabled' id='poi-main-monuments' value='true' />
+            <format attr='enabled' id='poi-main-cemetery' value='true' />
+            <format attr='enabled' id='poi-main-greenspace' value='true' />
+            <format attr='enabled' id='poi-main-primary' value='true' />
+            <format attr='enabled' id='poi-main-peaks' value='true' />
+            <format attr='enabled' id='poi-rail' value='true' />
+            <format attr='enabled' id='airport-label' value='true' />
+            <format attr='enabled' id='place-suburb' value='true' />
+            <format attr='enabled' id='place-neighborhood' value='true' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]' />
+              <size column='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station latitude:qk]</rows>
+        <cols>[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{4C96E695-0692-4858-81CF-CEC8615870CC}' />
+    </worksheet>
+    <worksheet name='Trip Duration and User Type 2021'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='feb_2020_data' name='federated.05urv8100ezs5w1cfygk21bc0o45' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.05urv8100ezs5w1cfygk21bc0o45'>
+            <column-instance column='[end station latitude (feb_2021_data.csv)]' derivation='Avg' name='[avg:end station latitude (feb_2021_data.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station longitude (feb_2021_data.csv)]' derivation='Avg' name='[avg:end station longitude (feb_2021_data.csv):qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Latitude (Feb 2021 Data.Csv)' datatype='real' name='[end station latitude (feb_2021_data.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Longitude (Feb 2021 Data.Csv)' datatype='real' name='[end station longitude (feb_2021_data.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[tripduration (feb_2021_data.csv)]' derivation='None' name='[none:tripduration (feb_2021_data.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype (feb_2021_data.csv)]' derivation='None' name='[none:usertype (feb_2021_data.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Tripduration (Feb 2021 Data.Csv)' datatype='integer' name='[tripduration (feb_2021_data.csv)]' role='measure' type='quantitative' />
+            <column caption='Usertype (Feb 2021 Data.Csv)' datatype='string' name='[usertype (feb_2021_data.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station longitude (feb_2021_data.csv):qk]' field-type='quantitative' max='-8239826.1761939861' min='-8247216.0848603137' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station latitude (feb_2021_data.csv):qk]' field-type='quantitative' max='4979889.1885569952' min='4966466.3272193149' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='place-village' value='true' />
+            <format attr='enabled' id='place-town' value='true' />
+            <format attr='enabled' id='place-islands' value='true' />
+            <format attr='enabled' id='place-islands-2' value='true' />
+            <format attr='enabled' id='place-city-sm' value='true' />
+            <format attr='enabled' id='place-city-md-s' value='true' />
+            <format attr='enabled' id='place-city-md-n' value='true' />
+            <format attr='enabled' id='place-city-lg-s' value='true' />
+            <format attr='enabled' id='place-city-lg-n' value='true' />
+            <format attr='enabled' id='place-capital-s' value='true' />
+            <format attr='enabled' id='place-capital-n' value='true' />
+            <format attr='enabled' id='US Metro Labels CBSA' value='true' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='poi-minor-secondary' value='true' />
+            <format attr='enabled' id='poi-minor-primary' value='true' />
+            <format attr='enabled' id='poi-main-monuments' value='true' />
+            <format attr='enabled' id='poi-main-cemetery' value='true' />
+            <format attr='enabled' id='poi-main-greenspace' value='true' />
+            <format attr='enabled' id='poi-main-primary' value='true' />
+            <format attr='enabled' id='poi-main-peaks' value='true' />
+            <format attr='enabled' id='poi-rail' value='true' />
+            <format attr='enabled' id='airport-label' value='true' />
+            <format attr='enabled' id='place-suburb' value='true' />
+            <format attr='enabled' id='place-neighborhood' value='true' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype (feb_2021_data.csv):nk]' />
+              <size column='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration (feb_2021_data.csv):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station latitude (feb_2021_data.csv):qk]</rows>
+        <cols>[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station longitude (feb_2021_data.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{B912E9CC-BAE7-4B2B-8A5A-F083D7CFD4BE}' />
+    </worksheet>
+    <worksheet name='User Type by Gender 2020'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='feb_2020_data' name='federated.05urv8100ezs5w1cfygk21bc0o45' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.05urv8100ezs5w1cfygk21bc0o45'>
+            <column datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tripduration]' derivation='Sum' name='[sum:tripduration:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]' value='29' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]' value='120' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[sum:tripduration:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:gender:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05urv8100ezs5w1cfygk21bc0o45].[sum:tripduration:qk]</rows>
+        <cols>[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]</cols>
+      </table>
+      <simple-id uuid='{9EA635B7-7A08-4023-9A09-358788D48121}' />
+    </worksheet>
+    <worksheet name='User Type by Gender 2021'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='feb_2020_data' name='federated.05urv8100ezs5w1cfygk21bc0o45' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05urv8100ezs5w1cfygk21bc0o45'>
+            <column caption='Gender (Feb 2021 Data.Csv)' datatype='integer' name='[gender (feb_2021_data.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[gender (feb_2021_data.csv)]' derivation='None' name='[none:gender (feb_2021_data.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype (feb_2021_data.csv)]' derivation='None' name='[none:usertype (feb_2021_data.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[tripduration (feb_2021_data.csv)]' derivation='Sum' name='[sum:tripduration (feb_2021_data.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration (Feb 2021 Data.Csv)' datatype='integer' name='[tripduration (feb_2021_data.csv)]' role='measure' type='quantitative' />
+            <column caption='Usertype (Feb 2021 Data.Csv)' datatype='string' name='[usertype (feb_2021_data.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[sum:tripduration (feb_2021_data.csv):qk]' scope='rows' value='Tripduration ' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:gender (feb_2021_data.csv):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05urv8100ezs5w1cfygk21bc0o45].[sum:tripduration (feb_2021_data.csv):qk]</rows>
+        <cols>[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype (feb_2021_data.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{33B75D84-E29E-4E90-9490-9495CFBCAA7D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story ' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98340' id='1' param='vert' removable='false' w='98426' x='787' y='830'>
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='830' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='87863' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='11307'>
+              <flipboard active-id='4' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Reduction in Users from 2020 to 2021' captured-sheet='User Comparison' id='3' />
+                  <story-point caption='Changes in Trips from 2020 to 2021' captured-sheet='Trip Geo Comparison' id='4'>
+                    <currentDeltas>
+                      <worksheet name='Trip Duration and User Type 2021'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station latitude (feb_2021_data.csv):qk]' field-type='quantitative' max='4986517.1866062488' min='4960965.0888384348' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.05urv8100ezs5w1cfygk21bc0o45].[avg:end station longitude (feb_2021_data.csv):qk]' field-type='quantitative' max='-8239097.0964052435' min='-8253164.7131366441' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </currentDeltas>
+                    <capturedDeltas />
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{82660637-A2F2-4A4F-947D-3473DFA8FF23}' />
+    </dashboard>
+    <dashboard name='Trip Geo Comparison'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='15' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='82400' x='800' y='1000'>
+                <zone h='98000' id='3' name='Trip Duration and User Type 2020' w='41200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='98000' id='10' name='Trip Duration and User Type 2021' w='41200' x='42000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='size' _.fcp.SetMembershipControl.true...type-v2='size' h='18250' id='8' name='Trip Duration and User Type 2020' pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration:qk]' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='size' _.fcp.SetMembershipControl.true...type-v2='size' h='15750' id='11' name='Trip Duration and User Type 2021' pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration (feb_2021_data.csv):qk]' w='16000' x='83200' y='19250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8250' id='9' name='Trip Duration and User Type 2020' pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]' w='16000' x='83200' y='35000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='25' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='24' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Trip Duration and User Type 2020' w='41200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='size' _.fcp.SetMembershipControl.true...type-v2='size' h='18250' id='8' name='Trip Duration and User Type 2020' pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration:qk]' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8250' id='9' name='Trip Duration and User Type 2020' pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]' w='16000' x='83200' y='35000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='10' is-fixed='true' name='Trip Duration and User Type 2021' w='41200' x='42000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='size' _.fcp.SetMembershipControl.true...type-v2='size' h='15750' id='11' name='Trip Duration and User Type 2021' pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration (feb_2021_data.csv):qk]' w='16000' x='83200' y='19250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5898A3CE-61B8-4BFF-BDC2-B8005AFEA109}' />
+    </dashboard>
+    <dashboard name='User Comparison'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='88625' id='7' param='horz' w='98400' x='800' y='10375'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='88625' id='5' w='98400' x='800' y='10375'>
+              <zone h='88625' id='3' name='User Type by Gender 2020' w='49200' x='800' y='10375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='88625' id='9' name='User Type by Gender 2021' w='49200' x='50000' y='10375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='9375' id='14' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='9375' id='8' name='User Type by Gender 2020' pane-specification-id='0' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:gender:qk]' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='28' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='27' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='88625' id='3' is-fixed='true' name='User Type by Gender 2020' w='49200' x='800' y='10375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='9375' id='8' name='User Type by Gender 2020' pane-specification-id='0' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:gender:qk]' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='88625' id='9' is-fixed='true' name='User Type by Gender 2021' w='49200' x='50000' y='10375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1E971FCC-B20A-40BF-B723-D7F0A1689EB0}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='User Type by Gender 2020'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:gender:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6EC8698D-B924-4A42-AE69-ADA2A572D44F}' />
+    </window>
+    <window class='worksheet' name='User Type by Gender 2021'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:gender (feb_2021_data.csv):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A51B340E-3B9C-48BE-9E79-CFDC39839A96}' />
+    </window>
+    <window class='worksheet' name='Trip Duration and User Type 2020'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration:qk]' type='size' />
+            <card pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{8B95684C-C569-4F2D-A602-DCFF6200C2F4}' />
+    </window>
+    <window class='worksheet' name='Trip Duration and User Type 2021'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:tripduration (feb_2021_data.csv):qk]' type='size' />
+            <card pane-specification-id='1' param='[federated.05urv8100ezs5w1cfygk21bc0o45].[none:usertype (feb_2021_data.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{CF66F337-0B06-44D5-809A-1FEE80F795E0}' />
+    </window>
+    <window class='dashboard' name='User Comparison'>
+      <viewpoints>
+        <viewpoint name='User Type by Gender 2020'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='User Type by Gender 2021'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{F93EE871-A8E5-453B-8871-C7889252DA92}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Trip Geo Comparison'>
+      <viewpoints>
+        <viewpoint name='Trip Duration and User Type 2020'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Trip Duration and User Type 2021'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{11B8CA54-2971-44AF-AAE0-CFB78770A030}' />
+    </window>
+    <window class='dashboard' name='Story '>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{7A75A3E4-9C8D-4739-820E-CE36FF560781}' />
+    </window>
+  </windows>
+</workbook>
