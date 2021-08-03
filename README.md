@@ -21,5 +21,10 @@
 - Web-Design Challenge
     - Skills Showcased: [HTML, CSS, Python, Matplotlib]
 - Web Scraping Challenge
-    - [Current]
-
+    - Skills Showcased: [HTML, CSS, Python, Beautiful Soup]
+- JavaScript Challenge
+    - Skills Showcased: [HTML, CSS, JavaScript]
+- Plotly Challenge
+    - Skills Showcased: [HTML, CSS, JavaScript, Data Visualization]
+- Tableau Challenge
+    - Skills Showcased: [Data Cleaning, Data Visualization, Data Analysis]
